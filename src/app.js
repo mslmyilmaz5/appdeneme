@@ -8,14 +8,14 @@ require('dotenv').config();
 const PORT = process.env.PORT || 3000;
 const uri = process.env.MONGODB_CONNECTION_STRING;
 
-let Tweet = require('./models/Tweet.model');
+let Tweet = require('../models/Tweet.model');
 
 app.set("view engine","ejs"); 
 app.use(express.static('public'));
 app.use(express.static('node_modules'));
 
-const start_date = new Date(2015, 5, 1)
-const end_date =  new Date(2015, 5, 31);
+const start_date = new Date(2019, 6, 1)
+const end_date =  new Date(2019, 6, 31);
 
 const monthNames = ["January", "February", "March", "April", "May", "June",
 "July", "August", "September", "October", "November", "December"];
